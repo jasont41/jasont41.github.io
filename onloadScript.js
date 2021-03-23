@@ -1,5 +1,5 @@
 var repoNames = [];
-
+var nHTML = "";
 window.onload = function(){
 	
 	var request = new XMLHttpRequest(); 
@@ -15,19 +15,19 @@ window.onload = function(){
 				data.forEach((repo) => { 
 				repoNames.push(repo.name); 
 				console.log(repo.name);
-				nHTML += repo.name+"<br>"; 
+				//document.getElementById("demo").innerHTML += repo.name+"<br>"; 
 				});
 		}
 		else{ console.log('error');}
 	}
-	var nHTML = "";
-	var i; 
-	for(i = 0; i < repoNames.length; i++){
-		 nHTML += repoNames[i] + "<br>"; 
-	}
+	console.log(repoNames.length);
 	
+	var i = 0; 
+	for(i; i < 17; i++){
+	document.getElementById("demo").innerHTML +=repoNames[i]; 
+	}
+	 nHTML; 
 	request.send();
-	document.getElementById("demo").innerHTML = nHTML; 
+	
+
 }
-
-
