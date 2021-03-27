@@ -3,7 +3,22 @@ var nHTML = '';
 var count = 0; 
 window.onload = function(){
 	
-	var request = new XMLHttpRequest(); 
+	
+	fetch('https://api.github.com/users/jasont41/repos')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    // Work with JSON data here
+    data.forEach(function(data){
+		console.log(data.name)
+		repoNames.push(data.name)
+	});
+  })
+  .catch((err) => {
+    // Do something for an error here
+  })
+	/*var request = new XMLHttpRequest(); 
 	request.open('GET', 'https://api.github.com/users/jasont41/repos', true) ;
 	request.onload = function(){
 		var data = JSON.parse(this.response)	
@@ -17,7 +32,7 @@ window.onload = function(){
 		}
 		else{ console.log('error');}
 	}
-	request.send();
+	request.send();*/
 	doWork(); 
 }
 
