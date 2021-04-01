@@ -18,7 +18,7 @@ window.onload = function(){
   .catch((err) => {
     // Do something for an error here
   })
-	
+
 	doWork();
 }
 
@@ -27,7 +27,7 @@ function doWork(){
 }
 function testing(){
 	document.getElementById("left1").innerHTML += repoNames[0]+"<br> <img src="+"https://raw.githubusercontent.com/jasont41/"+repoNames[0]+
-"/master/thumbnail.PNG"+" width='80%' height='80%' style='margin-left:10%;margin-right:10%;'>";
+"/master/thumbnail.PNG"+" width='80%' height='80%' style='object-fit:contain;margin-left:10%;margin-right:10%;'>";
 	document.getElementById("left2").innerHTML += repoNames[1];
 	document.getElementById("left3").innerHTML += repoNames[2];
 	//for(var i = 0; i< count; i++)
