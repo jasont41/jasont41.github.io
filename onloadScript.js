@@ -30,6 +30,7 @@ function testing(){
 "/master/thumbnail.PNG"+" width='80%' height='80%' style='object-fit:contain;margin-left:10%;margin-right:10%;'>";
 	document.getElementById("left2").innerHTML += repoNames[1];
 	document.getElementById("left3").innerHTML += repoNames[2];
-	//for(var i = 0; i< count; i++)
-	//	document.getElementById("demo").innerHTML += repoNames[i] + "<br>";
+	for(var i = 0; i < repoNames.length; i++){
+		document.getElementById("main").innerHTML += repoNames[i] + "<br>";
+	}
 }
